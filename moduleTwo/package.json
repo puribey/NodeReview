@@ -1,0 +1,18 @@
+{
+  "name": "moduletwo",
+  "version": "1.0.0",
+  "description": "node course module two",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Puri Bey",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
