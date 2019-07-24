@@ -241,9 +241,10 @@ router.get("/", (req, res, next) => {
 });
 ```
 ## Templating engines
-`npm install --save ejs pug express-handlebars`
+`npm install --save ejs pug express-handlebars`  
+
 In order to use any of these we need to use `app.set()` (sets a global configuration value) and `app.get()` (gets these values). The most important keys to use to **set** engines are `view engine` (allows us to specify the engine we want to use for templating) and `views` (tell express where to find these dynamic views).
-1. Pug(Jade): 
+1. **Pug(Jade):**
 - app.js = `app.set('view engine', 'pug')`
 - views > `shop.pug`
 - views > shop.pug = `header.main_header SHOP`
@@ -259,7 +260,7 @@ In order to use any of these we need to use `app.set()` (sets a global configura
 - To render conditionally => routes > shop.js = `res.render('shop', {products: products, header: Shop page, path: 'shop'})`
 - views > layouts > main-layout = `if path === 'shop' block content`
 
-2. Handlebars
+2. **Handlebars:**
 - app.js = `const handlebars = require('express-handlebars')`
 - app.js = `app.engine('hbs', handlebars())`
 - app.js = `app.set('view engine', 'hbs')`
@@ -282,7 +283,7 @@ app.engine(
 ```
 - views > layouts > main-layout = `{{{ body }}}`
 
-3. EJS
+3. **EJS:**
 - no layout but partials may be used
 - app.js = `app.set('view engine', 'ejs')`
 - syntax = `<% header %>`
